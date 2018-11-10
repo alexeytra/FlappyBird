@@ -9,11 +9,13 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 public class MyGdxGame extends ApplicationAdapter {
 	SpriteBatch batch;
 	Background background;
+	Bird bird;
 	
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
 		background = new Background();
+		bird = new Bird();
 	}
 
 	@Override
@@ -24,17 +26,18 @@ public class MyGdxGame extends ApplicationAdapter {
 		batch.begin();
 
 		background.render(batch);
-
+		bird.render(batch);
 		batch.end();
 	}
 
 	public void update() {
 		background.update();
+		bird.update();
+
 	}
 	
 	@Override
 	public void dispose () {
 		batch.dispose();
-
 	}
 }
