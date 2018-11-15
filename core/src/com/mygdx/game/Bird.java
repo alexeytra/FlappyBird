@@ -32,4 +32,9 @@ public class Bird {
         vy += gravity;
         position.y += vy;
     }
+
+    public void recreate(){
+        position = new Vector2(100, 380);
+        vy = 0;
+    }
 }
